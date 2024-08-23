@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css?family=Varela+Round');
+/* Sidebar Styles */
+body{
+    background: url('image2.jpg') no-repeat center center;
+    
+}
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.806); /* Adjust the opacity as needed */
+    z-index: -1; /* Ensure the overlay is behind the content */
+}
+#adminDashboard h1 {
+    font-size: 2.5rem; /* Increase font size */
+    font-weight: bold; /* Make the text bold */
+    text-align: center; /* Center the text */
+    /* padding-left: 20px; */
+    /* padding-right: 50px; */
+    /* padding-top: 50px; */
+}
+.button-container {
+    display: flex;
+    justify-content: center; /* Horizontally centers the buttons */
+    align-items: center; /* Vertically centers the buttons if needed */
+    gap: 1rem; /* Space between buttons */
+    margin-top: 2rem; /* Add some margin above the button group */
+}
+#manageRoomsBtn{
+    margin-left: 2rem;
+    font-size: 1.5rem;
+    align-items: center;
+    /* padding: 1rem 2rem; */
+}
+#createRoomBtn{
+    margin-left: 2rem;
+    font-size: 1.5rem;
+    /* padding: 1rem 2rem; */
+}
+#sidebar {
+    position: fixed; /* Fixed position on the side */
+    top: 500 px;
+    left: -200px; /* Initially hidden off-screen */
+    width: 250px;
+    height: 100%;
+    background: linear-gradient(180deg, #FC466B 0%, #3F5EFB 100%);
+    color: white;
+    overflow-x: hidden;
+    transition: left 0.3s ease; /* Smooth transition for sliding in */
+    z-index: 1000; /* Ensure sidebar is above other content */
+    /* padding: 7px; */
+}
+
+#sidebar nav {
+    padding: 1rem;
+}
+
+#sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#sidebar ul li {
+    margin-bottom: 1rem;
+}
+
+#sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 0.75rem;
+    border-radius: 4px; /* Rounded corners for the links */
+    font-size: 1rem;
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+#sidebar ul li a:hover {
+    background-color: #575757; /* Darken the background on hover */
+}
+
+/* Show Sidebar on Hover */
+#sidebar:hover {
+    left: 0; /* Slide the sidebar into view */
+}
+
+/* Main Content Styles */
+main#mainContent {
+    margin-left: 0; /* Default margin */
+    padding: 2rem;
+    transition: margin-left 0.3s ease; /* Smooth transition for margin adjustment */
+}
+
+#sidebar:hover ~ main#mainContent {
+    margin-left: 250px; /* Adjust margin when sidebar is visible */
+}
+footer { 
+    background-color: #FC466B; 
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: auto;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+} 

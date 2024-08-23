@@ -1,0 +1,158 @@
+/* @import url('https://fonts.googleapis.com/css?family=Varela+Round'); */
+
+/* Sidebar Styles */
+
+#sidebar {
+    position: fixed; /* Fixed position on the side */
+    top: 500 px;
+    left: -200px; /* Initially hidden off-screen */
+    width: 250px;
+    height: 100%;
+    background: linear-gradient(180deg, #FC466B 0%, #3F5EFB 100%);
+    color: white;
+    /* overflow-x: hidden; */
+    transition: left 0.3s ease; /* Smooth transition for sliding in */
+    z-index: 1000; /* Ensure sidebar is above other content */
+}
+
+#sidebar nav {
+    padding: 1rem;
+}
+
+#sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#sidebar ul li {
+    margin-bottom: 1rem;
+}
+
+#sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 0.75rem;
+    border-radius: 4px; /* Rounded corners for the links */
+    font-size: 1rem;
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+#sidebar ul li a:hover {
+    background-color: #575757; /* Darken the background on hover */
+}
+
+/* Show Sidebar on Hover */
+#sidebar:hover {
+    left: 0; /* Slide the sidebar into view */
+}
+/* Manager Dashboard Styles */
+
+#managerDashboard {
+    text-align: center; /* Center align the text in the dashboard section */
+}
+
+#managerDashboard h2 {
+    margin-bottom: 1.5rem;
+    color: #000e1b; /* Matching the header color */
+    font-family: "Fuzzy Bubbles";
+    font-weight: bold;
+}
+
+#managerContent {
+    font-weight: bold;
+    text-align: right; /* Corrected the text-align property */
+    margin-bottom: 1rem;
+}
+
+#managerCredits {
+    font-weight: bold;
+    color: #003366; /* Matching the header color */
+    font-weight: bold; /* Make the text bold */
+}
+
+#managerDashboard button {
+    /* margin-left: 2rem;*/
+    font-size: 1.5rem; 
+    width: auto; 
+    margin: 1rem auto; 
+    background-color: #FC466B   ; 
+    border: none;
+    cursor: pointer;
+}
+
+#managerDashboard button:hover {
+    background-color: #fc2d57; /* Darken button on hover */
+}
+
+#managerDashboard div {
+    margin-top: 2rem;
+}
+
+#organizeMeetingForm {
+    margin-top: 1.5rem;
+    max-width: 600px; /* Set a max-width for better readability */
+    margin: 0 auto; /* Center the form horizontally */
+    text-align: left; /* Align form labels and fields to the left */
+}
+
+#organizeMeetingForm label {
+    display: block;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+#organizeMeetingForm input,
+#organizeMeetingForm select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    box-sizing: border-box; /* Ensures padding does not affect width */
+}
+
+#organizeMeetingForm .checkbox-group {
+    margin-top: 0.5rem;
+}
+
+#organizeMeetingForm .checkbox-group label {
+    display: inline-block;
+    margin-left: 0.5rem; /* Space between checkbox and label */
+    vertical-align: middle; /* Align label vertically with checkbox */
+}
+
+#organizeMeetingForm input[type="checkbox"] {
+    margin-right: 0.5rem; /* Space between checkbox and label */
+    vertical-align: middle; /* Align checkbox vertically with label */
+}
+
+#organizeMeetingForm button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    padding: 0.75rem;
+    margin-top: 1rem; /* Adds spacing above the button */
+}
+
+#organizeMeetingForm button:hover {
+    background-color: #218838;
+}
+
+#scheduleView {
+    margin-top: 1.5rem;
+}
+
+footer { 
+    background-color: #FC466B; 
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: auto;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+} 
