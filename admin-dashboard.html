@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="admin-dashboard.css">
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body>
+<body class="admin-page">
     <!-- Header -->
     <header>
         <div class="logo">Meeting Room Booking</div>
@@ -26,7 +26,7 @@
         <nav>
             <ul>
                 <li><a href="admin-dashboard.html" id="dashboardLink">Dashboard</a></li>
-                <li><a href="#" id="createRoomLink">Create Room</a></li>
+                <li><a href="createRoom.html" id="createRoomLink">Create Room</a></li>
                 <li><a href="#" id="manageRoomsLink">Manage Rooms</a></li>
                 <li><a href="logout.html" id="logoutLink">Logout</a></li>
             </ul>
@@ -37,8 +37,8 @@
     <main id="mainContent">
         <section id="adminDashboard">
             <h1>Admin Dashboard</h1>
-            <br>
-            <br>
+            <!-- <br> -->
+            <!-- <br> -->
             <div class="button-container">
             <button id="createRoomBtn" class="text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 shadow-lg shadow-red-500/50 dark:shadow-lg dark:shadow-red-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">Create Room</button>
             <button id="manageRoomsBtn" class="text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 shadow-lg shadow-red-500/50 dark:shadow-lg dark:shadow-red-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">Manage Rooms</button>
@@ -47,7 +47,7 @@
             <!-- Create Room Form -->
             <div id="createRoomForm" style="display: none;">
                 <h3>Create Meeting Room</h3>
-                <form id="roomCreationForm">
+                <!-- <form id="roomCreationForm">
                     <label for="roomName">Room Name:</label>
                     <input type="text" id="roomName" name="roomName" required>
                     <label for="seatingCapacity">Seating Capacity:</label>
@@ -74,7 +74,7 @@
                         <label for="tvM">TV</label>
                     </div>
                 </form>
-            </div>
+            </div> -->
 
             <!-- Manage Rooms -->
             <div id="manageRooms" style="display: none;">
@@ -89,6 +89,6 @@
         <p>&copy; 2024 Meeting Room Booking System. All rights reserved.</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="admin-dashboard.js"></script>
 </body>
-</html> -->
+</html>
