@@ -1,3 +1,4 @@
+/* General Styles */
 body{
     background: url('image2.jpg') no-repeat center center;
     
@@ -12,19 +13,62 @@ body::before {
     background-color: rgba(255, 255, 255, 0.806); /* Adjust the opacity as needed */
     z-index: -1; /* Ensure the overlay is behind the content */
 }
+body {
+    font-family: 'Fuzzy Bubbles', cursive;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header Styles */
+header {
+    background-color: #FC466B;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center horizontally */
+}
+
+header .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1rem; /* Add some spacing below the heading */
+}
+
+header nav {
+    display: flex;
+    justify-content: center; /* Center navigation links */
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 1rem;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
 /* Sidebar Styles */
 #sidebar {
-    position: fixed; /* Fixed position on the side */
-    top: 500 px;
-    left: -200px; /* Initially hidden off-screen */
+    position: fixed; 
+    top: 0; 
+    left: -200px; /* Start off-screen */
     width: 250px;
     height: 100%;
     background: linear-gradient(180deg, #FC466B 0%, #3F5EFB 100%);
     color: white;
     overflow-x: hidden;
-    transition: left 0.3s ease; /* Smooth transition for sliding in */
-    z-index: 1000; /* Ensure sidebar is above other content */
-    /* padding: 7px; */
+    transition: left 0.3s ease; 
+    z-index: 1000; 
 }
 
 #sidebar nav {
@@ -45,115 +89,72 @@ body::before {
     color: white;
     text-decoration: none;
     display: block;
-    padding: 0.5rem 1rem; /* Reduced padding for smaller button size */
-    border-radius: 4px; /* Rounded corners for the links */
-    font-size: 0.875rem; /* Smaller font size for the links */
-    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+    padding: 0.75rem;
+    border-radius: 4px; 
+    font-size: 1rem;
+    transition: background-color 0.3s ease; 
 }
 
 #sidebar ul li a:hover {
-    background-color: #575757; /* Darken the background on hover */
+    background-color: #575757; 
 }
 
-/* Show Sidebar on Hover */
 #sidebar:hover {
-    left: 0; /* Slide the sidebar into view */
+    left: 0; /* Slide in the sidebar */
 }
 
-/* Member Dashboard Styles */
+/* Main Content Styles */
+main#mainContent {
+    margin-left: 0; /* Remove the margin to prevent pushing */
+    padding: 2rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the content horizontally */
+    justify-content: flex-start; /* Align the content to the top */
+    text-align: center; /* Center text alignment */
+    transition: margin-left 0.3s ease; /* Smooth transition for the main content */
+}
+
+/* Center the heading at the top */
 #memberDashboard h2 {
-    margin-bottom: 1.5rem;
-    text-align: center; /* Center-align the heading */
-    font-family: "Fuzzy Bubbles";
-    font-weight: bold;
-    font-size: 2.5rem; /* Larger font size for the heading */
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-align: center; /* Center the heading horizontally */
+    width: 100%; /* Ensure the heading takes up the full width */
 }
 
+/* Center the button */
 .button-container {
     display: flex;
-    justify-content: center; /* Horizontally centers the buttons */
-    align-items: center; /* Vertically centers the buttons if needed */
-    margin-top: 2rem; /* Add some margin above the button group */
-}
-#viewBookingsBtn{
-    margin-left: 2rem;
-    font-size: 2.5rem;
-    align-items: center;
-    /* padding: 1rem 2rem; */
+    justify-content: center; /* Center the button container horizontally */
+    margin-bottom: 2rem;
+    width: 100%; /* Ensure the button container takes up the full width */
+    text-align: center; /* Center text alignment */
 }
 
-#memberDashboard button {
-    background-color: #f7b801; /* Button background color */
-    color: white;
-    border: none;
-    cursor: pointer;
-    padding: 0.5rem 1rem; /* Adjust padding for the buttons */
-    font-size: 0.875rem; /* Smaller font size for the buttons */
-    border-radius: 5px; /* Optional: rounded corners */
-}
-
-#memberDashboard button:hover {
-    background-color: #e09d00; /* Darken button on hover */
-}
-
-#memberDashboard div {
+/* View Bookings and Book Room Sections */
+#viewBookings {
+    background: white;
+    padding: 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
     margin-top: 2rem;
+    width: 100%; /* Ensure sections take up the full width */
 }
 
-#bookRoomForm, #viewBookings {
-    margin-top: 1.5rem;
+#viewBookings h3 {
+    text-align: center;
 }
 
-#bookRoomForm h3, #viewBookings h3 {
-    text-align: center; /* Center-align the section headings */
-}
-
-#bookRoomForm form {
-    display: flex;
-    flex-direction: column; /* Stack form elements vertically */
-    align-items: center;
-    max-width: 600px; /* Set a maximum width for the form */
-    margin: 0 auto; /* Center the form horizontally */
-}
-
-#bookRoomForm label {
-    margin-bottom: 0.5rem;
-    font-weight: bold;
-}
-
-#bookRoomForm input, #bookRoomForm select {
-    width: 100%; /* Make input and select elements full width */
-    max-width: 400px; /* Set a maximum width */
-    margin-bottom: 1rem;
-    padding: 0.5rem;
-    border-radius: 5px; /* Optional: rounded corners */
-    border: 1px solid #ccc; /* Border color */
-}
-
-#bookRoomForm button {
-    background-color: #ffc107;
-    color: black;
-    border: none;
-    cursor: pointer;
-    padding: 0.5rem 1rem; /* Adjust padding for the button */
-    font-size: 0.875rem; /* Smaller font size for the button */
-    border-radius: 5px; /* Optional: rounded corners */
-}
-
-#bookRoomForm button:hover {
-    background-color: #e0a800;
-}
-
-#bookRoomForm input[type="checkbox"] {
-    margin-right: 0.5rem; /* Space between checkbox and label */
-    vertical-align: middle; /* Align checkbox with label */
-}
-
-#bookRoomForm label[for^="projectorB"], 
-#bookRoomForm label[for^="conferenceCallB"], 
-#bookRoomForm label[for^="whiteboardB"], 
-#bookRoomForm label[for^="waterDispenserB"], 
-#bookRoomForm label[for^="tvB"] {
-    display: flex;
-    align-items: center; /* Center-align the checkbox and label */
+/* Footer Styles */
+footer {
+    background-color: #FC466B;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    clear: both;
 }

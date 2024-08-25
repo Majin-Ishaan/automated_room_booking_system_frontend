@@ -26,7 +26,7 @@
             <ul>
                 <li><a href="member.html" id="dashboardLink">Dashboard</a></li>
                 <li><a href="#" id="viewBookingsLink">View Bookings</a></li>
-                <li><a href="#" id="bookRoomLink">Book a Room</a></li>
+                <!-- <li><a href="#" id="bookRoomLink">Book a Room</a></li> -->
                 <li><a href="logout.html" id="logoutLink">Logout</a></li>
             </ul>
         </nav>
@@ -46,29 +46,7 @@
                 <p>Your upcoming room bookings will be listed here...</p>
             </div>
 
-            <!-- Book Room -->
-            <div id="bookRoomForm" style="display: none;">
-                <h3>Book a Meeting Room</h3>
-                <form id="roomBookingForm">
-                    <label for="bookingDate">Date:</label>
-                    <input type="date" id="bookingDate" name="bookingDate" required>
-                    <label for="bookingTime">Time:</label>
-                    <input type="time" id="bookingTime" name="bookingTime" required>
-                    <label for="bookingDuration">Duration (hours):</label>
-                    <input type="number" id="bookingDuration" name="bookingDuration" required>
-                    <label for="roomBookingSelection">Select Room:</label>
-                    <select id="roomBookingSelection" name="roomBookingSelection" required>
-                        <option value="Room 1">Room 1</option>
-                        <option value="Room 2">Room 2</option>
-                    </select>
-                    <label>Amenities:</label>
-                    <input type="checkbox" id="projectorB" name="amenitiesB" value="Projector"> Projector
-                    <input type="checkbox" id="conferenceCallB" name="amenitiesB" value="Conference Call"> Conference Call Facility
-                    <input type="checkbox" id="whiteboardB" name="amenitiesB" value="Whiteboard"> Whiteboard
-                    <input type="checkbox" id="waterDispenserB" name="amenitiesB" value="Water Dispenser"> Water Dispenser
-                    <input type="checkbox" id="tvB" name="amenitiesB" value="TV"> TV
-                    <button type="submit">Book Room</button>
-                </form>
+           
             </div>
         </section>
     </main>
@@ -78,6 +56,6 @@
         <p>&copy; 2024 Meeting Room Booking System. All rights reserved.</p>
     </footer>
 
-    <script src="script.js"></script>
+    <!-- <script src=""></script> -->
 </body>
 </html>

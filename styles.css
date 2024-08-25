@@ -44,24 +44,18 @@ header nav a {
 header nav a:hover {
     text-decoration: underline;
 }
-/* #mainContent {
-    display: flex; 
-    align-items: center; 
-    justify-content: space-between; 
-    padding: 20px; 
-} */
-/* Main Content */
-main#mainContent {
-    padding: 1rem;
-    text-align: left;
-    flex: 1; /* Allow main content to grow and push footer down */
+
+#mainContent {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Adjust spacing between content and image */
+    min-height: 80vh;
 }
 
 #homePage {
-    margin-bottom: 2rem;
     flex: 1;
     padding: 20px;
-
+    max-width: 50%; /* Ensure content takes up half the screen */
 }
 
 #homePage h1 {
@@ -77,21 +71,17 @@ main#mainContent {
 /* Background Image Section */
 #backgroundImage {
     flex: 1;
-    background: url('image2.jpg') no-repeat center center;
-    /* margin-top: 2rem; */
-    /* padding-top: 15%; */
-    background-size: cover;
-    align-items: center;
+    background: url('image2.jpg') no-repeat center center; /* Ensure the image is centered */
+    background-size: cover; /* Ensure the image covers the entire section */
+    max-width: 50%; 
     width: 80%;
-    min-height: 4   00px;
+    min-height: 400px;
     box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.1), -15px -15px 15px rgba(0, 0, 0, 0.1);
-    height: 100%; /* Adjust height as needed */
-    /* margin-bottom: 0rem; */
 }
 
 /* Footer */
 footer {
-    background-color: #FC466B; /* Red color for the footer */
+    background-color: #FC466B; 
     color: white;
     text-align: center;
     padding: 1rem;

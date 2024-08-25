@@ -7,15 +7,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Handle the Create Room button click
     createRoomBtn.addEventListener("click", function() {
-        // Hide the manage rooms section if it is visible
-        manageRoomsSection.style.display = "none";
-
-        // Toggle the visibility of the create room form
-        if (createRoomForm.style.display === "none" || createRoomForm.style.display === "") {
-            createRoomForm.style.display = "block";
-        } else {
-            createRoomForm.style.display = "none";
-        }
+        // Redirect to the createRoom.html page
+        window.location.href = "createRoom.html";
     });
 
     // Handle the Manage Rooms button click

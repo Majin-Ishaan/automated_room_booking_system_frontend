@@ -1,16 +1,57 @@
-/* @import url('https://fonts.googleapis.com/css?family=Varela+Round'); */
+/* Center the Manager Dashboard heading at the top */
+body{
+    background: url('image2.jpg') no-repeat center center;
+    
+}
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.806); /* Adjust the opacity as needed */
+    z-index: -1; /* Ensure the overlay is behind the content */
+}
+body{
+    font-family: 'Fuzzy Bubbles', cursive;
+}
+
+#managerDashboard h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-top: 0; /* Align at the top */
+    margin-bottom: 1.5rem; /* Adjust the bottom margin for spacing */
+}
+
+/* Right-align the Available Credits information */
+#managerContent {
+    text-align: right;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    margin-right: 2rem; /* Add some right margin to separate it from the edge */
+}
+
+/* Center the Organize Meeting button at the top */
+#organizeMeetingBtn {
+    display: block;
+    margin: 0 auto; /* Centers the button horizontally */
+    margin-top: 1rem; /* Add margin at the top for spacing */
+    font-size: 1.2rem;
+    padding: 1rem 2rem;
+}
 
 /* Sidebar Styles */
-
 #sidebar {
     position: fixed; /* Fixed position on the side */
-    top: 500 px;
+    top: 0; /* Align the sidebar to the top */
     left: -200px; /* Initially hidden off-screen */
     width: 250px;
     height: 100%;
     background: linear-gradient(180deg, #FC466B 0%, #3F5EFB 100%);
     color: white;
-    /* overflow-x: hidden; */
+    overflow-x: hidden;
     transition: left 0.3s ease; /* Smooth transition for sliding in */
     z-index: 1000; /* Ensure sidebar is above other content */
 }
@@ -47,105 +88,33 @@
 #sidebar:hover {
     left: 0; /* Slide the sidebar into view */
 }
-/* Manager Dashboard Styles */
+
+/* Main Content Styles */
+main#mainContent {
+    margin-left: 0;
+    padding: 2rem;
+    transition: margin-left 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the content horizontally */
+    height: 100vh; /* Full viewport height */
+    padding-top: 20px; /* Adjust padding at the top to push content down */
+}
 
 #managerDashboard {
-    text-align: center; /* Center align the text in the dashboard section */
-}
-
-#managerDashboard h2 {
-    margin-bottom: 1.5rem;
-    color: #000e1b; /* Matching the header color */
-    font-family: "Fuzzy Bubbles";
-    font-weight: bold;
-}
-
-#managerContent {
-    font-weight: bold;
-    text-align: right; /* Corrected the text-align property */
-    margin-bottom: 1rem;
-}
-
-#managerCredits {
-    font-weight: bold;
-    color: #003366; /* Matching the header color */
-    font-weight: bold; /* Make the text bold */
-}
-
-#managerDashboard button {
-    /* margin-left: 2rem;*/
-    font-size: 1.5rem; 
-    width: auto; 
-    margin: 1rem auto; 
-    background-color: #FC466B   ; 
-    border: none;
-    cursor: pointer;
-}
-
-#managerDashboard button:hover {
-    background-color: #fc2d57; /* Darken button on hover */
-}
-
-#managerDashboard div {
-    margin-top: 2rem;
-}
-
-#organizeMeetingForm {
-    margin-top: 1.5rem;
-    max-width: 600px; /* Set a max-width for better readability */
-    margin: 0 auto; /* Center the form horizontally */
-    text-align: left; /* Align form labels and fields to the left */
-}
-
-#organizeMeetingForm label {
-    display: block;
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
-}
-
-#organizeMeetingForm input,
-#organizeMeetingForm select {
     width: 100%;
-    padding: 0.75rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 1rem;
-    box-sizing: border-box; /* Ensures padding does not affect width */
 }
 
-#organizeMeetingForm .checkbox-group {
-    margin-top: 0.5rem;
-}
-
-#organizeMeetingForm .checkbox-group label {
-    display: inline-block;
-    margin-left: 0.5rem; /* Space between checkbox and label */
-    vertical-align: middle; /* Align label vertically with checkbox */
-}
-
-#organizeMeetingForm input[type="checkbox"] {
-    margin-right: 0.5rem; /* Space between checkbox and label */
-    vertical-align: middle; /* Align checkbox vertically with label */
-}
-
-#organizeMeetingForm button {
-    background-color: #28a745;
-    color: white;
-    border: none;
-    cursor: pointer;
-    width: 100%;
-    padding: 0.75rem;
-    margin-top: 1rem; /* Adds spacing above the button */
-}
-
-#organizeMeetingForm button:hover {
-    background-color: #218838;
-}
-
+/* Styles for Form and Schedule Sections */
+#organizeMeetingForm,
 #scheduleView {
-    margin-top: 1.5rem;
+    text-align: left;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
+/* Footer Styles */
 footer { 
     background-color: #FC466B; 
     color: white;
@@ -155,4 +124,4 @@ footer {
     position: relative;
     bottom: 0;
     width: 100%;
-} 
+}

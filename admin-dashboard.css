@@ -2,7 +2,7 @@
 /* Sidebar Styles */
 body{
     background: url('image2.jpg') no-repeat center center;
-    
+    font-family: Fuzzy Bubbles, cursive;
 }
 body::before {
     content: "";
@@ -14,13 +14,20 @@ body::before {
     background-color: rgba(255, 255, 255, 0.806); /* Adjust the opacity as needed */
     z-index: -1; /* Ensure the overlay is behind the content */
 }
+#adminDashboard {
+    display: flex;
+    flex-direction: column;
+    align-items: recenter; 
+    height: inherit; 
+    padding: 2rem;
+    box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
+}
 #adminDashboard h1 {
     font-size: 2.5rem; /* Increase font size */
     font-weight: bold; /* Make the text bold */
     text-align: center; /* Center the text */
-    /* padding-left: 20px; */
-    /* padding-right: 50px; */
-    /* padding-top: 50px; */
+    padding: 20px;
+    margin: 0;
 }
 .button-container {
     display: flex;
@@ -29,16 +36,9 @@ body::before {
     gap: 1rem; /* Space between buttons */
     margin-top: 2rem; /* Add some margin above the button group */
 }
-#manageRoomsBtn{
-    margin-left: 2rem;
-    font-size: 1.5rem;
-    align-items: center;
-    /* padding: 1rem 2rem; */
-}
-#createRoomBtn{
-    margin-left: 2rem;
-    font-size: 1.5rem;
-    /* padding: 1rem 2rem; */
+#manageRoomsBtn, #createRoomBtn {
+    font-size: 1 rem;
+    padding: 0.75rem 1.5rem; /* Add padding for larger button size */
 }
 #sidebar {
     position: fixed; /* Fixed position on the side */
@@ -87,11 +87,14 @@ body::before {
     left: 0; /* Slide the sidebar into view */
 }
 
-/* Main Content Styles */
 main#mainContent {
     margin-left: 0; /* Default margin */
     padding: 2rem;
-    transition: margin-left 0.3s ease; /* Smooth transition for margin adjustment */
+    transition: margin-left 0.3s ease;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Full viewport height */
 }
 
 #sidebar:hover ~ main#mainContent {
